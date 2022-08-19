@@ -1,0 +1,37 @@
+@model Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ViewBag.getOne</h1>
+
+
+
+
+
+        <form action="/product/create" method="post">
+        <h1  > Add Product</h1>
+        <div>
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" id="">
+        <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+        <label asp-for="Description"></label>
+        <input type="text" asp-for="Description" id="">
+        <span asp-validation-for="Description"></span>
+        </div>
+        <div>
+        <label asp-for="Price"></label>
+        <input type="text" asp-for="Price" id="">
+        <span asp-validation-for="Price"></span>
+        </div>
+        <button>Add Product</button>
+        </form>
+</body>
+</html>

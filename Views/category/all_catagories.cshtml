@@ -1,0 +1,21 @@
+@model Category
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1><a href="/">Products</a>|Categories</h1>
+        <partial name="new"></partial>
+        <div>
+            @foreach (Category item in ViewBag.allCategory)
+            {
+            <h1> <a href="/category/@item.categoryId">@item.categoryName</a> </h1> 
+            }
+        </div>
+
+    </body>
+    </html>

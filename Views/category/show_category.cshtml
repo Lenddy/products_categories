@@ -1,0 +1,35 @@
+@model Association
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>@ViewBag.getOne.categoryName</h1> 
+            <a href="/category">home</a>
+        <div>
+            @foreach (var item in ViewBag.assigned2)
+                {
+                    <p>@item.Name</p>
+                }
+        </div>
+
+        <div >
+            <form action="/category/product/@ViewBag.getOne.categoryId" method="POST">
+                <h3>Would you like to Add a Product?</h3>
+                <select asp-for="productId">
+                    @foreach (Product item in ViewBag.unassigned2)
+                    {
+                        <option value="@item.productId">@item.Name</option>
+                    }
+                </select>
+                <button>Add Product</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
